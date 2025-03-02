@@ -5,13 +5,7 @@ interface SeoProps {
   url: string;
   domain?: string;
 }
-const Seo: React.FC<SeoProps> = ({
-  title,
-  description,
-  image,
-  url,
-  domain = '',
-}) => {
+const Seo: React.FC<SeoProps> = ({ title, description, image, url, domain = '' }) => {
   return (
     <>
       <title>{title}</title>
