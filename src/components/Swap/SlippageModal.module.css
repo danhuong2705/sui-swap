@@ -1,0 +1,68 @@
+.slippage-setting svg {
+  cursor: pointer;
+}
+.slippage-setting svg path {
+  fill: #ffffff;
+}
+
+.content {
+  margin-top: 20px;
+}
+.options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+.quick-option {
+  background: rgb(69, 69, 69);
+  border: none;
+  border-radius: 20px;
+  height: 44px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quick-option.active {
+  background: #ffffff;
+  color: #000000;
+}
+.inputWrapper {
+  height: 44px;
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgb(69, 69, 69);
+  border-radius: 20px;
+  padding: 0 8px;
+}
+
+.inputWrapper input {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.inputWrapper input:focus {
+  outline: none;
+}
+
+.warning {
+  margin-top: 20px;
+  color: #ff0000;
+  font-size: 12px;
+  padding: 8px 16px;
+  background: #ff000020;
+  border-radius: 8px;
+}
