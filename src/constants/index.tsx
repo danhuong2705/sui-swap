@@ -7,7 +7,7 @@ export const tokens: Array<Token> = [
     id: '0x9258181f5ceac8dbffb7030890243caed69a9599d2886d957a9cb7656af3bdb3',
     name: 'Sui',
     symbol: 'SUI',
-    address: '0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI',
+    address: '0x2::sui::SUI',
   },
   {
     decimals: 9,
@@ -35,3 +35,6 @@ export const tokens: Array<Token> = [
     address: '0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC',
   },
 ];
+
+export const suiAddressFull =
+  '0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI';

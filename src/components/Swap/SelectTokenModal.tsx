@@ -1,6 +1,6 @@
 import Modal from 'antd/es/modal/Modal';
 import styles from './SelectTokenModal.module.css';
-import { tokens } from '@/constants';
+import { suiAddressFull, tokens } from '@/constants';
 import type { Token } from '@/types/token';
 import { ArrowIcon } from '@/assets';
 import { memo, useEffect, useState } from 'react';
@@ -44,9 +44,17 @@ const SelectTokenModal: React.FC<SelectTokenModalProps> = ({ selectedToken, setS
         ? allBalances.find((coinBalance: CoinBalance) => coinBalance.coinType === token.address)
             ?.totalBalance || 0
         : 0;
+      let price = 0;
+      if (tokenPrices) {
+        if (token.symbol === 'SUI') {
+          price = tokenPrices[suiAddressFull];
+        } else {
+          price = tokenPrices[token.address];
+        }
+      }
       return {
         ...token,
-        price: tokenPrices ? tokenPrices[token.address] : 0,
+        price: price,
         balance: tokenBalance
           ? formatNumber(new BigNumber(tokenBalance).div(`1e${token.decimals}`).toNumber())
           : '0',

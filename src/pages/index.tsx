@@ -59,6 +59,7 @@ export default function Home() {
     !fromAmount ||
     !toAmount ||
     !route;
+
   useEffect(() => {
     afSdk.init();
   }, []);
